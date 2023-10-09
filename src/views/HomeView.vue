@@ -38,6 +38,7 @@ h1 {
 }
 .img-container{
   display: flex;
+  justify-content: center;
   margin: 0;
   height: 70vh;
 }
