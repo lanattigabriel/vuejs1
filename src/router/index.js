@@ -9,7 +9,7 @@ import AddProductView from '../views/AddProductView.vue'
 import CartView from '../views/CartView.vue'
 import EditProductsView from '../views/EditProductsView.vue'
 import ProductEditView from '../views/ProductEditView.vue'
-import { useLoginStore } from '../stores/Login.js'
+import { useLoginStore } from '../stores/login.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
