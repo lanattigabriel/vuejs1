@@ -1,9 +1,12 @@
 <template>
   <ion-page>
-    <h1>Here are our products.</h1>
+    <h1>Products</h1>
     <ion-content>
+      <div class="categories">
+
       <ion-button
         class="clothes-button"
+        color="dark"
         fill="outline"
         size="small"
         router-link="/products/pants"
@@ -11,6 +14,7 @@
       >
       <ion-button
         class="clothes-button"
+        color="dark"
         fill="outline"
         size="small"
         router-link="/products/shirts"
@@ -18,11 +22,15 @@
       >
       <ion-button
         class="clothes-button"
+        color="dark"
         fill="outline"
         size="small"
         router-link="/products/shoes"
         >Shoes</ion-button
       >
+      </div>
+      <div class="products-container">
+
       <ion-grid>
         <ion-row>
           <ion-col v-for="e in filteredProducts" :key="e.name">
@@ -39,13 +47,14 @@
                 Here's a small text description for the card content. Nothing
                 more, nothing less.
               </ion-card-content>
-              <ion-button @click="chooseProduct(e.name)"
+              <ion-button color="dark" fill="clear" @click="chooseProduct(e.name)"
                 >Add To Cart</ion-button
               >
             </ion-card>
           </ion-col>
         </ion-row>
       </ion-grid>
+      </div>
     </ion-content>
   </ion-page>
 </template>
@@ -125,13 +134,27 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+h1{
+  margin: 20px auto;
+
+}
 .clothes-button {
-  --border-radius: 7px;
+  border-radius: 7px;
+  margin: 10px;
 }
 ion-card {
   border-radius: 10px;
   max-width: 300px;
   min-width: 200px;
+  padding: 2px;
 }
+
+.categories{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
 </style>

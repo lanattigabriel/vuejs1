@@ -2,7 +2,9 @@
   <ion-page>
     <h1>Cart View</h1>
     <ion-content>
-      <p v-if='this.counter==0'>No products in the cart yet.</p>
+      <div v-if='this.counter==0' class="p-container">
+        <p>No products in the cart yet.</p>
+      </div>
       <ion-grid>
         <ion-row>
           <ion-col v-for="e in productsInCart" :key="e.name">
@@ -19,7 +21,7 @@
                 Here's a small text description for the card content. Nothing
                 more, nothing less.
               </ion-card-content>
-              <ion-button @click="removeProduct(e)">
+              <ion-button color="dark" fill="clear" @click="removeProduct(e)">
                 Remove From Cart</ion-button
               >
             </ion-card>
@@ -78,3 +80,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  h1{
+    align-self: center;
+  }
+</style>

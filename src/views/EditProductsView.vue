@@ -18,8 +18,8 @@
                 Here's a small text description for the card content. Nothing
                 more, nothing less.
               </ion-card-content>
-              <ion-button @click='editProduct(e.id)'>Edit</ion-button>
-              <ion-button @click='deleteProduct(e.id)'>Delete</ion-button>
+              <ion-button color="dark" fill="clear" @click='editProduct(e.id)'>Edit</ion-button>
+              <ion-button color="dark" fill="clear" @click='deleteProduct(e.id)'>Delete</ion-button>
             </ion-card>
           </ion-col>
         </ion-row>
@@ -123,7 +123,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .clothes-button {
   --border-radius: 7px;
 }
@@ -131,5 +131,9 @@ ion-card{
   border-radius: 10px;
   max-width: 300px;
   min-width: 200px;
+}
+h1{
+  align-self: center;
+  margin: 20px;
 }
 </style>
